@@ -6,7 +6,7 @@ const {isLoggedIn, isOwner ,validateListing}=require("../middleware.js");
 const multer=require('multer');
 const {storage}=require("../cloudconfig.js");
 const upload=multer({storage});
-const mbxGeocoding=require('@mapbox/mapbox-sdk/services/Geocoding');
+const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding");
 const mapToken=process.env.MAP_TOKEN;
 const geocodingClient=mbxGeocoding({accessToken:mapToken});
 
