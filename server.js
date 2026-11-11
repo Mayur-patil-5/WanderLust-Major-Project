@@ -322,6 +322,13 @@ app.delete(
     })
 )
 
+
+// HOME ROUTE
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
+
+
 // ==================================================
 // API 9: CATCH-ALL / 404 ROUTE
 // METHOD: ALL
