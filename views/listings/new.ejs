@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WanderLust</title>
+</head>
+
+<body>
+
+  <% layout("/layouts/boilerplate") %>
+
+    <div class="row">
+      <div class="col-8 offset-2">
+        <br>
+        <h3>Create a new Listing</h3>
+
+        <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+
+          <!-- Title -->
+          <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+
+            <input id="title" name="listing[title]" placeholder="enter title" type="text" class="form-control" required
+              minlength="3" maxlength="100">
+
+            <div class="valid-feedback">
+              Title Looks Superb ⚡
+            </div>
+
+            <div class="invalid-feedback">
+              Please enter a title with at least 3 characters.
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="mb-3">
+            <label for="description" class="form-label">
+              Description
+            </label>
+
+            <textarea id="description" name="listing[description]" class="form-control" required minlength="20"
+              maxlength="1000"></textarea>
+
+            <div class="valid-feedback">
+              Description looks good!
+            </div>
+
+            <div class="invalid-feedback">
+              Description must be at least 20 characters long.
+            </div>
+          </div>
+
+          <!-- Image -->
+          <!-- <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+
+            <input id="image" name="listing[image]" placeholder="enter image URL" type="url" class="form-control">
+
+            <div class="invalid-feedback">
+              Please enter a valid image URL.
+            </div>d3wf
+          </div> -->
+          <div class="mb-3">
+            <label for="image" class="form-label">Upload the Image</label>
+            <input id="image" name="listing[image]" type="file" class="form-control">
+            required
+          </div>
+
+          <div class="row">
+
+            <!-- Price -->
+            <div class="mb-3 col-md-4">
+              <label for="price" class="form-label">Price</label>
+
+              <input id="price" name="listing[price]" placeholder="enter price" type="number" class="form-control"
+                required min="1" step="1">
+
+              <div class="valid-feedback">
+                Valid price!
+              </div>
+
+              <div class="invalid-feedback">
+                Price must be greater than 0.
+              </div>
+            </div>
+
+            <!-- Country -->
+            <div class="mb-3 col-md-8">
+              <label for="country" class="form-label">
+                Country
+              </label>
+
+              <input id="country" name="listing[country]" placeholder="enter country" type="text" class="form-control"
+                required pattern="[A-Za-z][A-Za-z .'-]*">
+
+              <div class="valid-feedback">
+                Country looks good!
+              </div>
+
+              <div class="invalid-feedback">
+                Please enter a valid country name.
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Location -->
+          <div class="mb-3">
+            <label for="location" class="form-label">
+              Location
+            </label>
+
+            <input id="location" name="listing[location]" placeholder="enter location" type="text" class="form-control"
+              required minlength="2" pattern="[A-Za-z][A-Za-z0-9 ,.'-]*">
+
+            <div class="valid-feedback">
+              Location looks good!
+            </div>
+
+            <div class="invalid-feedback">
+              Please enter a valid location name.
+            </div>
+          </div>
+
+          <button class="darkbtn mt-3" type="submit">
+            Add
+          </button>
+
+          <br>
+
+        </form>
+      </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,211 @@
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+/* navbar */
+.navbar {
+    height: 5rem;
+    background-color: white;
+}
+
+.navbar-brand {
+    color: red;
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+/* footer */
+.f-info-links {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;
+
+}
+
+.f-info-links {
+    width: 100%;
+}
+
+.f-info-socials,
+.f-info-brand {
+    width: 100%;
+    font-size: 1.2rem;
+    margin-right: 2rem;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+
+}
+
+.f-info {
+    text-align: center;
+    display: flex;
+    height: 8rem;
+    background-color: #ebebeb;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+    justify-content: center;
+
+}
+
+.listing-card {
+    border: none !important;
+    margin-bottom: 2rem;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+
+.card-body {
+    padding: 0 !important;
+}
+
+.listing {
+    text-decoration: none;
+}
+
+/* card effect */
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+
+}
+
+.darkbtn {
+    background-color: black;
+    color: #ebebeb;
+    border-radius: 20%;
+    border: none !important;
+}
+
+.show-img {
+    height: 30vh;
+}
+
+.btns {
+    display: flex;
+}
+
+.edit-btn {
+    background-color: red;
+    color: #ebebeb;
+}
+
+.show-card {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.title {
+    margin-left: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+body:has(.auth-page) {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+body:has(.auth-page)>.container {
+    flex: 1;
+}
+
+body:has(.auth-page) footer {
+    margin-top: auto;
+}
+
+/* .flash-container {
+    max-width: 700px;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.flash-container .alert {
+ 
+margin-bottom: 0; */
+/* } */
+
+
+#map {
+    height: 400px;
+    width: 80vh;
+}
+.filters {
+    margin-top: 1rem;
+}
+
+#filters {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 1rem 0;
+}
+
+/* Hide scrollbar */
+#filters::-webkit-scrollbar {
+    display: none;
+}
+
+.filter {
+    flex: 0 0 auto;
+    text-align: center;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+
+.filter p {
+    margin-bottom: 0;
+    font-size: 0.8rem;
+}
+
+.tax-toggle {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+/* Mobile screen */
+@media (max-width: 768px) {
+    #filters {
+        gap: 1.2rem;
+    }
+
+    .tax-toggle {
+        display: flex;
+        flex: 0 0 auto;
+        margin-left: 1rem;
+    }
+}
