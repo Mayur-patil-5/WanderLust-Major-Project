@@ -1,6 +1,6 @@
 {
-  "engines":{
-      "node":"26.1.0"
+  "engines": {
+    "node": "26.1.0"
   },
   "name": "airbnb_wanderlust",
   "version": "1.0.0",
